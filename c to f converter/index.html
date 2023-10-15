@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius to Fahrenheit</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Celsius to Fahrenheit</h2>
+        <div id="inputdiv">
+            <input type="text" id="input" placeholder="enter Celsius">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">convert to Fahrenheit</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function convert(){
+            let cel = document.getElementById("input").value;
+            let far = (cel*(9/5))+32;
+            let result = document.getElementById("result");
+            result.innerHTML = far.toFixed(2) + " Fahrenheit";
+        }
+    </script>
+</body>
+</html>
